@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D39AC1CC1CB3416A005071B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AC1CB1CB3416A005071B6 /* AppDelegate.swift */; };
+		D39AC1CE1CB3416A005071B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AC1CD1CB3416A005071B6 /* ViewController.swift */; };
+		D39AC1D11CB3416A005071B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D39AC1CF1CB3416A005071B6 /* Main.storyboard */; };
+		D39AC1D31CB3416A005071B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D39AC1D21CB3416A005071B6 /* Assets.xcassets */; };
+		D39AC1D61CB3416A005071B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D39AC1D41CB3416A005071B6 /* LaunchScreen.storyboard */; };
+		D39AC1E11CB3416B005071B6 /* PickACardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AC1E01CB3416B005071B6 /* PickACardTests.swift */; };
+		D39AC1EC1CB3416B005071B6 /* PickACardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AC1EB1CB3416B005071B6 /* PickACardUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D39AC1DD1CB3416B005071B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D39AC1C01CB34169005071B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D39AC1C71CB3416A005071B6;
+			remoteInfo = PickACard;
+		};
+		D39AC1E81CB3416B005071B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D39AC1C01CB34169005071B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D39AC1C71CB3416A005071B6;
+			remoteInfo = PickACard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D39AC1C81CB3416A005071B6 /* PickACard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickACard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39AC1CB1CB3416A005071B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D39AC1CD1CB3416A005071B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D39AC1D01CB3416A005071B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D39AC1D21CB3416A005071B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D39AC1D51CB3416A005071B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D39AC1D71CB3416A005071B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D39AC1DC1CB3416B005071B6 /* PickACardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickACardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39AC1E01CB3416B005071B6 /* PickACardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickACardTests.swift; sourceTree = "<group>"; };
+		D39AC1E21CB3416B005071B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D39AC1E71CB3416B005071B6 /* PickACardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickACardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39AC1EB1CB3416B005071B6 /* PickACardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickACardUITests.swift; sourceTree = "<group>"; };
+		D39AC1ED1CB3416B005071B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D39AC1C51CB3416A005071B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39AC1D91CB3416B005071B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39AC1E41CB3416B005071B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D39AC1BF1CB34169005071B6 = {
+			isa = PBXGroup;
+			children = (
+				D39AC1CA1CB3416A005071B6 /* PickACard */,
+				D39AC1DF1CB3416B005071B6 /* PickACardTests */,
+				D39AC1EA1CB3416B005071B6 /* PickACardUITests */,
+				D39AC1C91CB3416A005071B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D39AC1C91CB3416A005071B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D39AC1C81CB3416A005071B6 /* PickACard.app */,
+				D39AC1DC1CB3416B005071B6 /* PickACardTests.xctest */,
+				D39AC1E71CB3416B005071B6 /* PickACardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D39AC1CA1CB3416A005071B6 /* PickACard */ = {
+			isa = PBXGroup;
+			children = (
+				D39AC1CB1CB3416A005071B6 /* AppDelegate.swift */,
+				D39AC1CD1CB3416A005071B6 /* ViewController.swift */,
+				D39AC1CF1CB3416A005071B6 /* Main.storyboard */,
+				D39AC1D21CB3416A005071B6 /* Assets.xcassets */,
+				D39AC1D41CB3416A005071B6 /* LaunchScreen.storyboard */,
+				D39AC1D71CB3416A005071B6 /* Info.plist */,
+			);
+			path = PickACard;
+			sourceTree = "<group>";
+		};
+		D39AC1DF1CB3416B005071B6 /* PickACardTests */ = {
+			isa = PBXGroup;
+			children = (
+				D39AC1E01CB3416B005071B6 /* PickACardTests.swift */,
+				D39AC1E21CB3416B005071B6 /* Info.plist */,
+			);
+			path = PickACardTests;
+			sourceTree = "<group>";
+		};
+		D39AC1EA1CB3416B005071B6 /* PickACardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D39AC1EB1CB3416B005071B6 /* PickACardUITests.swift */,
+				D39AC1ED1CB3416B005071B6 /* Info.plist */,
+			);
+			path = PickACardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D39AC1C71CB3416A005071B6 /* PickACard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D39AC1F01CB3416B005071B6 /* Build configuration list for PBXNativeTarget "PickACard" */;
+			buildPhases = (
+				D39AC1C41CB3416A005071B6 /* Sources */,
+				D39AC1C51CB3416A005071B6 /* Frameworks */,
+				D39AC1C61CB3416A005071B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PickACard;
+			productName = PickACard;
+			productReference = D39AC1C81CB3416A005071B6 /* PickACard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D39AC1DB1CB3416B005071B6 /* PickACardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D39AC1F31CB3416B005071B6 /* Build configuration list for PBXNativeTarget "PickACardTests" */;
+			buildPhases = (
+				D39AC1D81CB3416B005071B6 /* Sources */,
+				D39AC1D91CB3416B005071B6 /* Frameworks */,
+				D39AC1DA1CB3416B005071B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D39AC1DE1CB3416B005071B6 /* PBXTargetDependency */,
+			);
+			name = PickACardTests;
+			productName = PickACardTests;
+			productReference = D39AC1DC1CB3416B005071B6 /* PickACardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D39AC1E61CB3416B005071B6 /* PickACardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D39AC1F61CB3416B005071B6 /* Build configuration list for PBXNativeTarget "PickACardUITests" */;
+			buildPhases = (
+				D39AC1E31CB3416B005071B6 /* Sources */,
+				D39AC1E41CB3416B005071B6 /* Frameworks */,
+				D39AC1E51CB3416B005071B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D39AC1E91CB3416B005071B6 /* PBXTargetDependency */,
+			);
+			name = PickACardUITests;
+			productName = PickACardUITests;
+			productReference = D39AC1E71CB3416B005071B6 /* PickACardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D39AC1C01CB34169005071B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = GraceHou;
+				TargetAttributes = {
+					D39AC1C71CB3416A005071B6 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					D39AC1DB1CB3416B005071B6 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = D39AC1C71CB3416A005071B6;
+					};
+					D39AC1E61CB3416B005071B6 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = D39AC1C71CB3416A005071B6;
+					};
+				};
+			};
+			buildConfigurationList = D39AC1C31CB34169005071B6 /* Build configuration list for PBXProject "PickACard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D39AC1BF1CB34169005071B6;
+			productRefGroup = D39AC1C91CB3416A005071B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D39AC1C71CB3416A005071B6 /* PickACard */,
+				D39AC1DB1CB3416B005071B6 /* PickACardTests */,
+				D39AC1E61CB3416B005071B6 /* PickACardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D39AC1C61CB3416A005071B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D39AC1D61CB3416A005071B6 /* LaunchScreen.storyboard in Resources */,
+				D39AC1D31CB3416A005071B6 /* Assets.xcassets in Resources */,
+				D39AC1D11CB3416A005071B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39AC1DA1CB3416B005071B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39AC1E51CB3416B005071B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D39AC1C41CB3416A005071B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D39AC1CE1CB3416A005071B6 /* ViewController.swift in Sources */,
+				D39AC1CC1CB3416A005071B6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39AC1D81CB3416B005071B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D39AC1E11CB3416B005071B6 /* PickACardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39AC1E31CB3416B005071B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D39AC1EC1CB3416B005071B6 /* PickACardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D39AC1DE1CB3416B005071B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D39AC1C71CB3416A005071B6 /* PickACard */;
+			targetProxy = D39AC1DD1CB3416B005071B6 /* PBXContainerItemProxy */;
+		};
+		D39AC1E91CB3416B005071B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D39AC1C71CB3416A005071B6 /* PickACard */;
+			targetProxy = D39AC1E81CB3416B005071B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D39AC1CF1CB3416A005071B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D39AC1D01CB3416A005071B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D39AC1D41CB3416A005071B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D39AC1D51CB3416A005071B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D39AC1EE1CB3416B005071B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D39AC1EF1CB3416B005071B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D39AC1F11CB3416B005071B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PickACard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GraceHou.PickACard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D39AC1F21CB3416B005071B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PickACard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GraceHou.PickACard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D39AC1F41CB3416B005071B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PickACardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GraceHou.PickACardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PickACard.app/PickACard";
+			};
+			name = Debug;
+		};
+		D39AC1F51CB3416B005071B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PickACardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GraceHou.PickACardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PickACard.app/PickACard";
+			};
+			name = Release;
+		};
+		D39AC1F71CB3416B005071B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PickACardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GraceHou.PickACardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PickACard;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D39AC1F81CB3416B005071B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PickACardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GraceHou.PickACardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PickACard;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D39AC1C31CB34169005071B6 /* Build configuration list for PBXProject "PickACard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D39AC1EE1CB3416B005071B6 /* Debug */,
+				D39AC1EF1CB3416B005071B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D39AC1F01CB3416B005071B6 /* Build configuration list for PBXNativeTarget "PickACard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D39AC1F11CB3416B005071B6 /* Debug */,
+				D39AC1F21CB3416B005071B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D39AC1F31CB3416B005071B6 /* Build configuration list for PBXNativeTarget "PickACardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D39AC1F41CB3416B005071B6 /* Debug */,
+				D39AC1F51CB3416B005071B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D39AC1F61CB3416B005071B6 /* Build configuration list for PBXNativeTarget "PickACardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D39AC1F71CB3416B005071B6 /* Debug */,
+				D39AC1F81CB3416B005071B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D39AC1C01CB34169005071B6 /* Project object */;
+}
