@@ -28,6 +28,8 @@ class SavingsTableController: UITableViewController {
         alert.addAction(UIAlertAction(title: "Add", style: .Default) { action -> Void in
             let expense = (alert.textFields?.first as UITextField!).text;
             let location = (alert.textFields?.last as UITextField!).text;
+            self.savingsByCard[self.savingsByCard.count] = (location!, Double(expense!)!);
+            self.savingsTableView.reloadData();
         })
         alert.addAction(UIAlertAction(title: "Cancel", style: .Default) { _ in })
         alert.addTextFieldWithConfigurationHandler { (textField : UITextField!) -> Void in
@@ -40,8 +42,8 @@ class SavingsTableController: UITableViewController {
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        cell.textLabel?.text = savingsByCard[indexPath.row]!.savings.description;
         cell.detailTextLabel?.text = savingsByCard[indexPath.row]!.cardName;
+        cell.textLabel?.text = savingsByCard[indexPath.row]!.savings.description;
         
        return cell;
     }
