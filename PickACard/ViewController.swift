@@ -38,7 +38,7 @@ class ViewController: UIViewController {
                 
                 if let jsonResult = response.result.value {
                     for anItem in jsonResult as! [Dictionary<String, AnyObject>] {
-                        print(anItem)
+//                        print(anItem)
                         let promotion = Promotion(name: anItem["name"] as! String, descrip: anItem["description"] as! String, discount: anItem["discount"] as! String, coordinate: CLLocationCoordinate2D(latitude: (anItem["latitude"] as! NSNumber).doubleValue, longitude: (anItem["longitude"] as! NSNumber).doubleValue))
                         self.mapView.addAnnotation(promotion)
                     }
@@ -58,18 +58,17 @@ class ViewController: UIViewController {
     // selector methods
     func expenseAmountChanged(textField: UITextField) {
         self.newExpense = textField.text!
-        print(self.newExpense)
     }
     
     // selector methods
     func expenseLocationChanged(textField: UITextField) {
         self.newLocation = textField.text!
-        print(self.newLocation)
     }
     
     func addExpense(sender:UIButton)
     {
         print("hello in ViewController " + self.newExpense + " " + self.newLocation)
+        ExpenseAPI.sharedInstance.addExpense(Expense(expense: Double(self.newExpense)!, location: self.newLocation))
     }
 }
 

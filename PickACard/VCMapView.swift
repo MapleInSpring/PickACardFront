@@ -52,6 +52,7 @@ extension ViewController: MKMapViewDelegate {
         expenseAmount.addTarget(self, action: "expenseAmountChanged:", forControlEvents: UIControlEvents.EditingChanged)
         addExpenseView.addSubview(expenseAmount)
         
+        // TODO: can preset location here
         let expenseLocation : UITextField = UITextField()
         expenseLocation.frame = CGRectMake(50, 65, 100,25)
         expenseLocation.backgroundColor = UIColor.grayColor()

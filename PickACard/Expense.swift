@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class Expense: NSObject {
+    let expense : Double
+    let location : String
+    
+    init(expense: Double, location: String) {
+        self.expense = expense
+        self.location = location
+    }
+}

@@ -11,6 +11,9 @@
 		D31BE8BF1CF1424B00658741 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31BE8BC1CF1424B00658741 /* Expense.swift */; };
 		D31BE8C01CF1424B00658741 /* SavingsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31BE8BD1CF1424B00658741 /* SavingsDetailViewController.swift */; };
 		D31BE8C21CFAC5B100658741 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31BE8C11CFAC5B100658741 /* VCMapView.swift */; };
+		D31BE8C51CFAF55A00658741 /* ExpenseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31BE8C41CFAF55A00658741 /* ExpenseAPI.swift */; };
+		D31BE8C71CFAF57200658741 /* SavingsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31BE8C61CFAF57200658741 /* SavingsAPI.swift */; };
+		D31BE8C91CFAF64300658741 /* ExpensePersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31BE8C81CFAF64300658741 /* ExpensePersistencyManager.swift */; };
 		D39AC1CC1CB3416A005071B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AC1CB1CB3416A005071B6 /* AppDelegate.swift */; };
 		D39AC1CE1CB3416A005071B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AC1CD1CB3416A005071B6 /* ViewController.swift */; };
 		D39AC1D11CB3416A005071B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D39AC1CF1CB3416A005071B6 /* Main.storyboard */; };
@@ -48,6 +51,9 @@
 		D31BE8BC1CF1424B00658741 /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		D31BE8BD1CF1424B00658741 /* SavingsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingsDetailViewController.swift; sourceTree = "<group>"; };
 		D31BE8C11CFAC5B100658741 /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
+		D31BE8C41CFAF55A00658741 /* ExpenseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseAPI.swift; sourceTree = "<group>"; };
+		D31BE8C61CFAF57200658741 /* SavingsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingsAPI.swift; sourceTree = "<group>"; };
+		D31BE8C81CFAF64300658741 /* ExpensePersistencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensePersistencyManager.swift; sourceTree = "<group>"; };
 		D39AC1C81CB3416A005071B6 /* PickACard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickACard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39AC1CB1CB3416A005071B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D39AC1CD1CB3416A005071B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +124,16 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		D31BE8C31CFAF4DC00658741 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D31BE8C41CFAF55A00658741 /* ExpenseAPI.swift */,
+				D31BE8C61CFAF57200658741 /* SavingsAPI.swift */,
+				D31BE8C81CFAF64300658741 /* ExpensePersistencyManager.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		D39AC1BF1CB34169005071B6 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +159,7 @@
 		D39AC1CA1CB3416A005071B6 /* PickACard */ = {
 			isa = PBXGroup;
 			children = (
+				D31BE8C31CFAF4DC00658741 /* API */,
 				D30129E91CD8B5CB00AFE890 /* Models */,
 				D30129E61CD8735000AFE890 /* Controllers */,
 				D39AC1CB1CB3416A005071B6 /* AppDelegate.swift */,
@@ -366,9 +383,12 @@
 			files = (
 				D31BE8C01CF1424B00658741 /* SavingsDetailViewController.swift in Sources */,
 				D31BE8BF1CF1424B00658741 /* Expense.swift in Sources */,
+				D31BE8C91CFAF64300658741 /* ExpensePersistencyManager.swift in Sources */,
 				D39AC1CE1CB3416A005071B6 /* ViewController.swift in Sources */,
 				D39AC1CC1CB3416A005071B6 /* AppDelegate.swift in Sources */,
 				D39B936B1CB49626008F64EA /* Promotion.swift in Sources */,
+				D31BE8C51CFAF55A00658741 /* ExpenseAPI.swift in Sources */,
+				D31BE8C71CFAF57200658741 /* SavingsAPI.swift in Sources */,
 				D31BE8C21CFAC5B100658741 /* VCMapView.swift in Sources */,
 				D31BE8BE1CF1424B00658741 /* SavingsTableController.swift in Sources */,
 			);
