@@ -56,10 +56,6 @@ class SavingsTableController: UITableViewController {
                 
                 controller.cardNameText = savingsByCard[indexPath.row]!.cardName;
                 controller.savingsText = savingsByCard[indexPath.row]!.savings.description;
-                
-                let backItem = UIBarButtonItem()
-                backItem.title = "Something Else"
-                controller.navigationItem.backBarButtonItem = backItem
             }
         }
     }

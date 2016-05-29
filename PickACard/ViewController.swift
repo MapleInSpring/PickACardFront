@@ -15,6 +15,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    var newExpense : String = ""
+    var newLocation : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,14 +27,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         Alamofire.request(.GET, "http://pickacardbackendv2.cfapps.io/promotions")
             .responseJSON { response in
-                print("response data")
-                print(response.data)
-                print("response request")
-                print(response.request)
-                print("response result")
-                print(response.result)
-                print("response response")
-                print(response.response)
+//                print("response data")
+//                print(response.data)
+//                print("response request")
+//                print(response.request)
+//                print("response result")
+//                print(response.result)
+//                print("response response")
+//                print(response.response)
                 
                 if let jsonResult = response.result.value {
                     for anItem in jsonResult as! [Dictionary<String, AnyObject>] {
@@ -42,6 +45,7 @@ class ViewController: UIViewController {
                 }
         }
         
+        mapView.delegate = self
     }
 
     let regionRadius: CLLocationDistance = 1000
@@ -50,5 +54,24 @@ class ViewController: UIViewController {
             regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
+    
+    // selector methods
+    func expenseAmountChanged(textField: UITextField) {
+        self.newExpense = textField.text!
+        print(self.newExpense)
+    }
+    
+    // selector methods
+    func expenseLocationChanged(textField: UITextField) {
+        self.newLocation = textField.text!
+        print(self.newLocation)
+    }
+    
+    func addExpense(sender:UIButton)
+    {
+        print("hello in ViewController " + self.newExpense + " " + self.newLocation)
+    }
 }
+
+
 

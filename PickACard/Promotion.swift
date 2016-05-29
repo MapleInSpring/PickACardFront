@@ -14,12 +14,16 @@ class Promotion: NSObject, MKAnnotation {
     let descrip: String
     let discount: String
     let coordinate: CLLocationCoordinate2D
+    let title: String?
+    let subtitle: String?
     
     init(name: String, descrip: String, discount: String, coordinate: CLLocationCoordinate2D) {
         self.name = name
         self.descrip = descrip
         self.discount = discount
         self.coordinate = coordinate
+        self.title = name
+        self.subtitle = descrip
         super.init()
     }
 }
