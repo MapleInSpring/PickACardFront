@@ -22,22 +22,6 @@ class SavingsDetailViewController: UIViewController {
         self.navigationController?.popViewControllerAnimated(true)
     }
     
-//    var detailCandy: Candy? {
-//        didSet {
-//            configureView()
-//        }
-//    }
-    
-//    func configureView() {
-//        if let detailCandy = detailCandy {
-//            if let detailDescriptionLabel = detailDescriptionLabel, candyImageView = candyImageView {
-//                detailDescriptionLabel.text = detailCandy.name
-//                candyImageView.image = UIImage(named: detailCandy.name)
-//                title = detailCandy.category
-//            }
-//        }
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         cardName.text = cardNameText;

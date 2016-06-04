@@ -25,44 +25,61 @@ extension ViewController: MKMapViewDelegate {
                 view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 view.canShowCallout = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
-                configureDetailView(view)
+                switch(annotation.cardName)
+                {
+                    case "OCBC":
+                        view.pinTintColor = UIColor.yellowColor()
+                    case "UOB":
+                        view.pinTintColor = UIColor.greenColor()
+                    default:
+                        view.pinTintColor = UIColor.redColor()
+                }
+                
+                configureDetailView(view, promotion: annotation)
             }
             return view
         }
         return nil
     }
     
-    func configureDetailView(annotationView: MKAnnotationView) {
+    func configureDetailView(annotationView: MKAnnotationView, promotion: Promotion) {
         let addExpenseView = UIView()
         let views = ["addExpenseView": addExpenseView]
         addExpenseView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[addExpenseView(300)]", options: [], metrics: nil, views: views))
         addExpenseView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[addExpenseView(200)]", options: [], metrics: nil, views: views))
         addExpenseView.backgroundColor = UIColor.blueColor()
         
-        let label: UILabel = UILabel()
-        label.frame = CGRectMake(25, 5, 200, 25)
-        label.backgroundColor=UIColor.whiteColor()
-        label.textAlignment = NSTextAlignment.Center
-        label.text = "Add Expense"
-        addExpenseView.addSubview(label)
+        let descriptionLabel: UILabel = UILabel()
+        descriptionLabel.frame = CGRectMake(25, 5, 200, 25)
+        descriptionLabel.backgroundColor=UIColor.whiteColor()
+        descriptionLabel.textAlignment = NSTextAlignment.Center
+        descriptionLabel.text = promotion.descrip
+        addExpenseView.addSubview(descriptionLabel)
+        
+        let discountLabel: UILabel = UILabel()
+        discountLabel.frame = CGRectMake(25, 35, 200, 25)
+        discountLabel.backgroundColor=UIColor.whiteColor()
+        discountLabel.textAlignment = NSTextAlignment.Center
+        discountLabel.text = promotion.discount
+        addExpenseView.addSubview(discountLabel)
         
         let expenseAmount : UITextField = UITextField()
-        expenseAmount.frame = CGRectMake(50, 35, 100,25)
+        expenseAmount.frame = CGRectMake(50, 65, 100,25)
         expenseAmount.backgroundColor = UIColor.grayColor()
         expenseAmount.addTarget(self, action: "expenseAmountChanged:", forControlEvents: UIControlEvents.EditingChanged)
         addExpenseView.addSubview(expenseAmount)
         
         // TODO: can preset location here
         let expenseLocation : UITextField = UITextField()
-        expenseLocation.frame = CGRectMake(50, 65, 100,25)
+        expenseLocation.frame = CGRectMake(50, 95, 100,25)
         expenseLocation.backgroundColor = UIColor.grayColor()
         expenseLocation.addTarget(self, action: "expenseLocationChanged:", forControlEvents: UIControlEvents.EditingChanged)
         addExpenseView.addSubview(expenseLocation)
         
         let btn: UIButton = UIButton()
-        btn.frame=CGRectMake(50, 95, 100, 30)
+        btn.frame=CGRectMake(50, 125, 150, 30)
         btn.backgroundColor=UIColor.redColor()
-        btn.setTitle("submit", forState: UIControlState.Normal)
+        btn.setTitle("Add Expense", forState: UIControlState.Normal)
         btn.addTarget(self, action: "addExpense:", forControlEvents: UIControlEvents.TouchUpInside)
         addExpenseView.addSubview(btn)
         

@@ -27,19 +27,37 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         Alamofire.request(.GET, "http://pickacardbackendv2.cfapps.io/promotions")
             .responseJSON { response in
-//                print("response data")
-//                print(response.data)
-//                print("response request")
-//                print(response.request)
-//                print("response result")
-//                print(response.result)
-//                print("response response")
-//                print(response.response)
-                
+                print(response.result.value)
                 if let jsonResult = response.result.value {
-                    for anItem in jsonResult as! [Dictionary<String, AnyObject>] {
+                    for anItem in jsonResult["OCBC"] as! [Dictionary<String, AnyObject>] {
 //                        print(anItem)
-                        let promotion = Promotion(name: anItem["name"] as! String, descrip: anItem["description"] as! String, discount: anItem["discount"] as! String, coordinate: CLLocationCoordinate2D(latitude: (anItem["latitude"] as! NSNumber).doubleValue, longitude: (anItem["longitude"] as! NSNumber).doubleValue))
+                        let promotion =
+                        Promotion(
+                            name: anItem["name"] as! String,
+                            descrip: anItem["description"] as! String,
+                            discount: anItem["discount"] as! String,
+                            postalcode: (anItem["postalcode"] as! NSNumber).description,
+                            coordinate: CLLocationCoordinate2D(
+                                latitude: (anItem["latitude"] as! NSNumber).doubleValue,
+                                longitude: (anItem["longitude"] as! NSNumber).doubleValue),
+                            cardName: "OCBC")
+                        
+                        self.mapView.addAnnotation(promotion)
+                    }
+                    
+                    for anItem in jsonResult["UOB"] as! [Dictionary<String, AnyObject>] {
+                        //                        print(anItem)
+                        let promotion =
+                        Promotion(
+                            name: anItem["name"] as! String,
+                            descrip: anItem["description"] as! String,
+                            discount: anItem["discount"] as! String,
+                            postalcode: (anItem["postalcode"] as! NSNumber).description,
+                            coordinate: CLLocationCoordinate2D(
+                                latitude: (anItem["latitude"] as! NSNumber).doubleValue,
+                                longitude: (anItem["longitude"] as! NSNumber).doubleValue),
+                            cardName: "UOB")
+                        
                         self.mapView.addAnnotation(promotion)
                     }
                 }
