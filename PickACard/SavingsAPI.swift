@@ -20,7 +20,7 @@ class SavingsAPI: NSObject {
     
     func getSavings(completionHandler: (savings: NSArray) -> ()) {
         var savings = [Saving]()
-        Alamofire.request(.GET, "http://localhost:3000/savings")
+        Alamofire.request(.GET, "http://pickacardbackendv2.cfapps.io/savings")
             .responseJSON { response in
 //                print(response.result.value)
                 if let jsonResult = response.result.value {

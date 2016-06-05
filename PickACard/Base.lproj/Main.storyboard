@@ -113,7 +113,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="9Dr-Dz-V0z" kind="showDetail" identifier="showSavingsDetail" id="J7h-Ng-DLV"/>
+                                    <segue destination="XNM-6o-b0g" kind="show" identifier="showSavingsDetail" id="ctX-4s-ZEP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAZ-tK-gjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1973" y="624"/>
+            <point key="canvasLocation" x="1145" y="624"/>
         </scene>
         <!--Savings-->
         <scene sceneID="YsZ-8f-xmf">
@@ -220,24 +220,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyg-zQ-6gH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-357" y="624"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="pDr-eX-lZy">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Dr-Dz-V0z" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hj5-tv-Gay">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="XNM-6o-b0g" kind="relationship" relationship="rootViewController" id="Q68-X7-4k0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xcG-lz-LKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1161" y="624"/>
         </scene>
     </scenes>
 </document>

@@ -88,11 +88,13 @@ class SavingsTableController: UITableViewController {
         if segue.identifier == "showSavingsDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! SavingsDetailViewController
+                let controller = segue.destinationViewController as! SavingsDetailViewController
                 
                 controller.cardNameText = savingsByCard[indexPath.row].cardName;
                 controller.savingsText = savingsByCard[indexPath.row].amount.description;
                 controller.savingDetails = savingsByCard[indexPath.row].savingDetails;
+                
+                controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }
