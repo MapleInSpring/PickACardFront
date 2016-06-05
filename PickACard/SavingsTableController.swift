@@ -15,21 +15,22 @@ class SavingsTableController: UITableViewController {
     var defaultSavingsByCard = [Saving]()
     
     override func viewDidLoad() {
-        SavingsAPI.sharedInstance.getSavings{
-            savings in
-            self.savingsByCard = savings as! [Saving]
-            self.defaultSavingsByCard = savings as! [Saving]
-            self.savingsTableView.reloadData();
-        }
+        updateTable()
         super.viewDidLoad()
     }
     
     override func viewWillAppear(animated: Bool) {
+        updateTable()
+        super.viewWillAppear(animated)
+    }
+    
+    func updateTable() {
         SavingsAPI.sharedInstance.getSavings{
             savings in
+            self.savingsByCard = savings as! [Saving] // need to selectively update
+            self.savingsTableView.reloadData()
             self.defaultSavingsByCard = savings as! [Saving]
         }
-        super.viewWillAppear(animated)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,7 +43,7 @@ class SavingsTableController: UITableViewController {
             let expense = (alert.textFields?.first as UITextField!).text;
             let location = (alert.textFields?.last as UITextField!).text;
             ExpenseAPI.sharedInstance.addExpense(Expense(expense: Double(expense!)!, location: location!));
-            self.savingsTableView.reloadData();
+            self.updateTable() //TODO: get after update
         })
         alert.addAction(UIAlertAction(title: "Cancel", style: .Default) { _ in })
         alert.addTextFieldWithConfigurationHandler { (textField : UITextField!) -> Void in

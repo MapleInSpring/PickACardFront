@@ -31,7 +31,7 @@ class ViewController: UIViewController {
 //        Alamofire.request(.GET, "http://pickacardbackendv2.cfapps.io/promotions")
         Alamofire.request(.GET, "http://localhost:3000/promotions")
             .responseJSON { response in
-                print(response.result.value)
+//                print(response.result.value)
                 if let jsonResult = response.result.value {
                     print(jsonResult)
                     for anItem in jsonResult as! [Dictionary<String, AnyObject>] {
@@ -42,11 +42,13 @@ class ViewController: UIViewController {
                         let latitude = Double(anItem["latitude"] as! String)!
                         let longitude = Double(anItem["longitude"] as! String)!
                         let cardName = anItem["card_name"] as! String
+                        let minSpending = Double(anItem["min_spending"] as! String)!
                         let promotion =
                         Promotion(
                             name: name,
                             descrip: description,
                             discount:  "\(discount)% off",
+                            minSpending: "Min Spending is \(minSpending)",
                             postalcode: postalcode,
                             coordinate: CLLocationCoordinate2D(
                                 latitude: latitude,

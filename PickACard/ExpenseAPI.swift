@@ -34,7 +34,7 @@ class ExpenseAPI: NSObject {
         [
             "expense": [
                 "amount": expense.expense,
-                "location": expense.location
+                "postalcode": expense.location
             ]
         ]
 //        Alamofire.request(.POST, "http://pickacardbackendv2.cfapps.io/add_expense", parameters: parameters as? [String : AnyObject])

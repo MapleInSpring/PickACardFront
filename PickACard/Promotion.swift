@@ -14,15 +14,17 @@ class Promotion: NSObject, MKAnnotation {
     let cardName: String
     let descrip: String
     let discount: String
+    let minSpending: String
     let postalcode: String
     let coordinate: CLLocationCoordinate2D
     let title: String?
     let subtitle: String?
     
-    init(name: String, descrip: String, discount: String, postalcode: String, coordinate: CLLocationCoordinate2D, cardName: String) {
+    init(name: String, descrip: String, discount: String, minSpending: String, postalcode: String, coordinate: CLLocationCoordinate2D, cardName: String) {
         self.name = name
         self.descrip = descrip
         self.discount = discount
+        self.minSpending = minSpending
         self.postalcode = postalcode
         self.coordinate = coordinate
         self.title = name

@@ -23,23 +23,23 @@ class SavingsAPI: NSObject {
 //        Alamofire.request(.GET, "http://pickacardbackendv2.cfapps.io/savings")
         Alamofire.request(.GET, "http://localhost:3000/savings")
             .responseJSON { response in
-//                print(response.result.value)
+                print(response.result.value)
                 if let jsonResult = response.result.value {
                     for aItem in jsonResult as! [Dictionary<String, AnyObject>] {
                         let saving =
                             Saving(
-                                amount: (aItem["amount"] as! NSNumber).doubleValue,
+                                amount: Double(aItem["amount"] as! String)!,
                                 cardName: aItem["cardName"] as! String
                               
                             )
                         for bItem in aItem["savings"] as! [Dictionary<String, AnyObject>] {
                             let savingDetail =
                                 SavingDetail(
-                                    expenseAmount: (bItem["expenseAmount"] as! NSNumber).doubleValue,
-                                    savedAmount: (bItem["savedAmount"] as! NSNumber).doubleValue,
+                                    expenseAmount: Double(bItem["expenseAmount"] as! String)!,
+                                    savedAmount: Double(bItem["savedAmount"] as! String)!,
                                     location: bItem["location"] as! String,
                                     postalcode: (bItem["postalcode"] as! NSNumber).integerValue,
-                                    promotionDetails: bItem["promotionDetails"] as! String)
+                                    promotionDetails: bItem["promotion_details"] as! String)
                             saving.savingDetails.append(savingDetail)
                         }
                         savings.append(saving)
