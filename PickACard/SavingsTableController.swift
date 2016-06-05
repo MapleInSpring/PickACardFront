@@ -54,6 +54,21 @@ class SavingsTableController: UITableViewController {
         self.presentViewController(alert, animated: true){}
     }
     
+    @IBAction func showAddCardAlert(sender: AnyObject) {
+        let alert = UIAlertController(title: "Add Card", message:"Add a card", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Add", style: .Default) { action -> Void in
+            let cardName = (alert.textFields?.first as UITextField!).text;
+            let savingForCard = self.defaultSavingsByCard.filter{$0.cardName == cardName}.first
+            self.savingsByCard.append(savingForCard!)
+            self.savingsTableView.reloadData();
+            })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Default) { _ in })
+        alert.addTextFieldWithConfigurationHandler { (textField : UITextField!) -> Void in
+            textField.placeholder = "Card Name"
+        }
+        self.presentViewController(alert, animated: true){}
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         cell.detailTextLabel?.text = savingsByCard[indexPath.row].cardName;

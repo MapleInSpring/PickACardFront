@@ -72,6 +72,9 @@
                                     <rect key="frame" x="250" y="15" width="90" height="30"/>
                                     <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <state key="normal" title="Add A Card"/>
+                                    <connections>
+                                        <action selector="showAddCardAlert:" destination="4W2-1d-kHg" eventType="touchUpInside" id="sRO-hE-9Oj"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zC-l2-vBm">
                                     <rect key="frame" x="75" y="15" width="101" height="30"/>
