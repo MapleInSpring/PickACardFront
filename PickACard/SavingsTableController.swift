@@ -11,17 +11,23 @@ import Foundation
 class SavingsTableController: UITableViewController {
     @IBOutlet var savingsTableView: UITableView!
     
-    var savingsByCard = [Saving]() // should be savings, change later
+    var savingsByCard = [Saving]()
+    var defaultSavingsByCard = [Saving]()
     
     override func viewDidLoad() {
+        SavingsAPI.sharedInstance.getSavings{
+            savings in
+            self.savingsByCard = savings as! [Saving]
+            self.defaultSavingsByCard = savings as! [Saving]
+            self.savingsTableView.reloadData();
+        }
         super.viewDidLoad()
     }
     
     override func viewWillAppear(animated: Bool) {
         SavingsAPI.sharedInstance.getSavings{
             savings in
-            self.savingsByCard = savings as! [Saving]
-            self.savingsTableView.reloadData();
+            self.defaultSavingsByCard = savings as! [Saving]
         }
         super.viewWillAppear(animated)
     }
@@ -56,6 +62,13 @@ class SavingsTableController: UITableViewController {
        return cell;
     }
     
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            savingsByCard.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showSavingsDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
@@ -64,6 +77,7 @@ class SavingsTableController: UITableViewController {
                 
                 controller.cardNameText = savingsByCard[indexPath.row].cardName;
                 controller.savingsText = savingsByCard[indexPath.row].amount.description;
+                controller.savingDetails = savingsByCard[indexPath.row].savingDetails;
             }
         }
     }

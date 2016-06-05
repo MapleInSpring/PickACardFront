@@ -1,3 +1,4 @@
+
 //
 //  SavingsDetailViewController.swift
 //  PickACard
@@ -8,14 +9,16 @@
 
 import UIKit
 
-class SavingsDetailViewController: UIViewController {
+class SavingsDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
 
     @IBOutlet weak var cardName: UILabel!
     @IBOutlet weak var savings: UILabel!
+    @IBOutlet weak var detailsTableView: UITableView!
     
     var cardNameText:String = "";
     var savingsText:String = "";
+    var savingDetails = [SavingDetail]();
     
     func goBack()
     {
@@ -26,5 +29,19 @@ class SavingsDetailViewController: UIViewController {
         super.viewDidLoad()
         cardName.text = cardNameText;
         savings.text = savingsText;
+        self.detailsTableView.delegate = self
+        self.detailsTableView.dataSource = self
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.savingDetails.count;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("DetailCell", forIndexPath: indexPath)
+        cell.detailTextLabel?.text = self.savingDetails[indexPath.row].savedAmount.description;
+        cell.textLabel?.text = self.savingDetails[indexPath.row].expenseAmount.description;
+        
+        return cell;
     }
 }
