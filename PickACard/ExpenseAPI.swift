@@ -30,6 +30,16 @@ class ExpenseAPI: NSObject {
     
     func addExpense(expense: Expense) {
         pm.addExpense(expense)
+        let parameters =
+        [
+            "expense": [
+                "amount": expense.expense,
+                "location": expense.location
+            ]
+        ]
+//        Alamofire.request(.POST, "http://pickacardbackendv2.cfapps.io/add_expense", parameters: parameters as? [String : AnyObject])
+        Alamofire.request(.POST, "http://localhost:3000/add_expense", parameters: parameters)
+
     }
     
     func deleteExpense(index: Int) {
