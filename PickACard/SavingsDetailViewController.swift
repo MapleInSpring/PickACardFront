@@ -38,9 +38,11 @@ class SavingsDetailViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("DetailCell", forIndexPath: indexPath)
-        cell.detailTextLabel?.text = self.savingDetails[indexPath.row].savedAmount.description;
-        cell.textLabel?.text = self.savingDetails[indexPath.row].expenseAmount.description;
+        let cell = tableView.dequeueReusableCellWithIdentifier("DetailCell", forIndexPath: indexPath) as! SavingDetailCell
+        cell.saved.text = self.savingDetails[indexPath.row].savedAmount.description;
+        cell.spent.text = self.savingDetails[indexPath.row].expenseAmount.description;
+        cell.location.text = self.savingDetails[indexPath.row].location;
+        cell.promotion.text = self.savingDetails[indexPath.row].promotionDetails;
         
         return cell;
     }
