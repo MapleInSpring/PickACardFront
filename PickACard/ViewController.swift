@@ -95,8 +95,12 @@ class ViewController: UIViewController {
     
     func addExpense(sender:UIButton)
     {
-        print("hello in ViewController " + self.newExpense + " " + self.newLocation)
-        ExpenseAPI.sharedInstance.addExpense(Expense(expense: Double(self.newExpense)!, location: self.newLocation))
+        if (self.newLocation == "") {
+            ExpenseAPI.sharedInstance.addExpense(Expense(expense: Double(self.newExpense)!, location: sender.tag.description))
+        } else {
+            ExpenseAPI.sharedInstance.addExpense(Expense(expense: Double(self.newExpense)!, location: self.newLocation))
+        }
+
     }
 }
 

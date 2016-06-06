@@ -31,6 +31,7 @@ class SavingsDetailViewController: UIViewController, UITableViewDataSource, UITa
         savings.text = savingsText;
         self.detailsTableView.delegate = self
         self.detailsTableView.dataSource = self
+        self.detailsTableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

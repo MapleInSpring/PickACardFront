@@ -82,12 +82,14 @@ extension ViewController: MKMapViewDelegate {
         expenseLocation.frame = CGRectMake(50, 125, 100,25)
         expenseLocation.backgroundColor = UIColor.grayColor()
         expenseLocation.placeholder = "Location"
+        expenseLocation.text = promotion.postalcode
         expenseLocation.addTarget(self, action: "expenseLocationChanged:", forControlEvents: UIControlEvents.EditingChanged)
         addExpenseView.addSubview(expenseLocation)
         
         let btn: UIButton = UIButton()
         btn.frame=CGRectMake(50, 155, 150, 30)
         btn.backgroundColor=UIColor.redColor()
+        btn.tag = Int(promotion.postalcode)!
         btn.setTitle("Add Expense", forState: UIControlState.Normal)
         btn.addTarget(self, action: "addExpense:", forControlEvents: UIControlEvents.TouchUpInside)
         addExpenseView.addSubview(btn)

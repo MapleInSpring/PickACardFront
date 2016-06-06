@@ -27,7 +27,7 @@ class Promotion: NSObject, MKAnnotation {
         self.minSpending = minSpending
         self.postalcode = postalcode
         self.coordinate = coordinate
-        self.title = name
+        self.title = "\(name) : \(cardName)"
         self.subtitle = descrip
         self.cardName = cardName
         super.init()

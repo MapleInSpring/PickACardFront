@@ -42,6 +42,23 @@ class ExpenseAPI: NSObject {
 
     }
     
+    func addExpenseWithCallback(expense: Expense, completion: () -> Void ) {
+        pm.addExpense(expense)
+        let parameters =
+        [
+            "expense": [
+                "amount": expense.expense,
+                "postalcode": expense.location
+            ]
+        ]
+        //        Alamofire.request(.POST, "http://pickacardbackendv2.cfapps.io/add_expense", parameters: parameters as? [String : AnyObject])
+        Alamofire.request(.POST, "http://localhost:3000/add_expense", parameters: parameters).responseJSON {
+            _ in
+            completion()
+        }
+        
+    }
+    
     func deleteExpense(index: Int) {
         pm.deleteExpenseAtIndex(index)
     }

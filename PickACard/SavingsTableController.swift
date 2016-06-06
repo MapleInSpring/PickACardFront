@@ -15,6 +15,7 @@ class SavingsTableController: UITableViewController {
     var defaultSavingsByCard = [Saving]()
     
     override func viewDidLoad() {
+        self.savingsTableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         updateTable()
         super.viewDidLoad()
     }
@@ -27,9 +28,14 @@ class SavingsTableController: UITableViewController {
     func updateTable() {
         SavingsAPI.sharedInstance.getSavings{
             savings in
-            self.savingsByCard = savings as! [Saving] // need to selectively update
-            self.savingsTableView.reloadData()
             self.defaultSavingsByCard = savings as! [Saving]
+            var tempSavings = [Saving]()
+            for saving in self.savingsByCard {
+                tempSavings.append(self.defaultSavingsByCard.filter{$0.cardName == saving.cardName}.first!)
+            }
+            self.savingsByCard = tempSavings
+            self.savingsTableView.reloadData()
+
         }
     }
     
@@ -42,8 +48,9 @@ class SavingsTableController: UITableViewController {
         alert.addAction(UIAlertAction(title: "Add", style: .Default) { action -> Void in
             let expense = (alert.textFields?.first as UITextField!).text;
             let location = (alert.textFields?.last as UITextField!).text;
-            ExpenseAPI.sharedInstance.addExpense(Expense(expense: Double(expense!)!, location: location!));
-            self.updateTable() //TODO: get after update
+            ExpenseAPI.sharedInstance.addExpenseWithCallback(Expense(expense: Double(expense!)!, location: location!)) {
+                self.updateTable()
+            };
         })
         alert.addAction(UIAlertAction(title: "Cancel", style: .Default) { _ in })
         alert.addTextFieldWithConfigurationHandler { (textField : UITextField!) -> Void in
