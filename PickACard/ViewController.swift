@@ -95,12 +95,14 @@ class ViewController: UIViewController {
     
     func addExpense(sender:UIButton)
     {
+        var postalcode = "";
         if (self.newLocation == "") {
-            ExpenseAPI.sharedInstance.addExpense(Expense(expense: Double(self.newExpense)!, location: sender.tag.description))
+            postalcode = sender.tag.description
         } else {
-            ExpenseAPI.sharedInstance.addExpense(Expense(expense: Double(self.newExpense)!, location: self.newLocation))
+            postalcode = self.newLocation
         }
-
+        ExpenseAPI.sharedInstance.addExpense(Expense(expense: Double(self.newExpense)!, location: postalcode))
+        [self.mapView .deselectAnnotation(self.promotions.filter{$0.postalcode == postalcode}.first, animated: false)]
     }
 }
 

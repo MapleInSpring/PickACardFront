@@ -86,7 +86,7 @@
         <scene sceneID="jBn-Ms-PBP">
             <objects>
                 <tableViewController id="4W2-1d-kHg" customClass="SavingsTableController" customModule="PickACard" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wCa-JS-zJN">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="25" id="wCa-JS-zJN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -94,15 +94,21 @@
                             <rect key="frame" x="0.0" y="64" width="600" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTA-Gh-TwT">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTA-Gh-TwT">
                                     <rect key="frame" x="250" y="15" width="90" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="90" id="i5j-Of-YwC"/>
+                                    </constraints>
                                     <state key="normal" title="Add A Card"/>
                                     <connections>
                                         <action selector="showAddCardAlert:" destination="4W2-1d-kHg" eventType="touchUpInside" id="sRO-hE-9Oj"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zC-l2-vBm">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zC-l2-vBm">
                                     <rect key="frame" x="75" y="15" width="101" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="101" id="hHW-NM-Jaa"/>
+                                    </constraints>
                                     <state key="normal" title="Add Expense"/>
                                     <connections>
                                         <action selector="showAddExpenseAlert:" destination="4W2-1d-kHg" eventType="touchUpInside" id="e1X-na-TfN"/>
@@ -110,6 +116,12 @@
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.94058912630000002" green="0.94058912630000002" blue="0.94058912630000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="KTA-Gh-TwT" firstAttribute="leading" secondItem="5zC-l2-vBm" secondAttribute="trailing" constant="74" id="dR4-ot-t3C"/>
+                                <constraint firstItem="KTA-Gh-TwT" firstAttribute="baseline" secondItem="5zC-l2-vBm" secondAttribute="baseline" id="ix7-mi-rtS"/>
+                                <constraint firstItem="5zC-l2-vBm" firstAttribute="centerY" secondItem="gRI-f0-9Gp" secondAttribute="centerY" id="rlP-OM-U9w"/>
+                                <constraint firstItem="5zC-l2-vBm" firstAttribute="leading" secondItem="gRI-f0-9Gp" secondAttribute="leading" constant="75" id="stD-F5-RYE"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="h7e-nj-6fu" detailTextLabel="WaZ-er-GG5" style="IBUITableViewCellStyleSubtitle" id="EQV-h9-DRs">

@@ -47,48 +47,49 @@ extension ViewController: MKMapViewDelegate {
         let views = ["addExpenseView": addExpenseView]
         addExpenseView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[addExpenseView(300)]", options: [], metrics: nil, views: views))
         addExpenseView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[addExpenseView(200)]", options: [], metrics: nil, views: views))
-        addExpenseView.backgroundColor = UIColor.blueColor()
+        addExpenseView.backgroundColor = UIColor.purpleColor()
         
         let descriptionLabel: UILabel = UILabel()
-        descriptionLabel.frame = CGRectMake(25, 5, 200, 25)
+        descriptionLabel.frame = CGRectMake(25, 5, 250, 25)
         descriptionLabel.backgroundColor=UIColor.whiteColor()
         descriptionLabel.textAlignment = NSTextAlignment.Center
         descriptionLabel.text = promotion.descrip
         addExpenseView.addSubview(descriptionLabel)
         
         let discountLabel: UILabel = UILabel()
-        discountLabel.frame = CGRectMake(25, 35, 200, 25)
+        discountLabel.frame = CGRectMake(25, 35, 250, 25)
         discountLabel.backgroundColor=UIColor.whiteColor()
         discountLabel.textAlignment = NSTextAlignment.Center
         discountLabel.text = promotion.discount
         addExpenseView.addSubview(discountLabel)
         
         let minSpendingLabel: UILabel = UILabel()
-        minSpendingLabel.frame = CGRectMake(25, 65, 200, 25)
+        minSpendingLabel.frame = CGRectMake(25, 65, 250, 25)
         minSpendingLabel.backgroundColor=UIColor.whiteColor()
         minSpendingLabel.textAlignment = NSTextAlignment.Center
         minSpendingLabel.text = promotion.minSpending
         addExpenseView.addSubview(minSpendingLabel)
         
         let expenseAmount : UITextField = UITextField()
-        expenseAmount.frame = CGRectMake(50, 95, 100,25)
-        expenseAmount.backgroundColor = UIColor.grayColor()
+        expenseAmount.frame = CGRectMake(50, 95, 200,25)
+        expenseAmount.backgroundColor = UIColor.whiteColor()
         expenseAmount.placeholder = "Expense"
         expenseAmount.addTarget(self, action: "expenseAmountChanged:", forControlEvents: UIControlEvents.EditingChanged)
         addExpenseView.addSubview(expenseAmount)
         
         // TODO: can preset location here
         let expenseLocation : UITextField = UITextField()
-        expenseLocation.frame = CGRectMake(50, 125, 100,25)
-        expenseLocation.backgroundColor = UIColor.grayColor()
+        expenseLocation.frame = CGRectMake(50, 125, 200,25)
+        expenseLocation.backgroundColor = UIColor.whiteColor()
         expenseLocation.placeholder = "Location"
         expenseLocation.text = promotion.postalcode
         expenseLocation.addTarget(self, action: "expenseLocationChanged:", forControlEvents: UIControlEvents.EditingChanged)
         addExpenseView.addSubview(expenseLocation)
         
         let btn: UIButton = UIButton()
-        btn.frame=CGRectMake(50, 155, 150, 30)
-        btn.backgroundColor=UIColor.redColor()
+        btn.frame=CGRectMake(50, 155, 200, 30)
+        btn.backgroundColor=UIColor.whiteColor()
+        btn.setTitleColor(UIColor.purpleColor(), forState: .Normal)
         btn.tag = Int(promotion.postalcode)!
         btn.setTitle("Add Expense", forState: UIControlState.Normal)
         btn.addTarget(self, action: "addExpense:", forControlEvents: UIControlEvents.TouchUpInside)
